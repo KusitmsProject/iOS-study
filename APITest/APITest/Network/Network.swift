@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-func getData() {
+func getData(_ completedHandler : @escaping (Data)->Void){
     let url = "https://vjsel.herokuapp.com/book/comments/1"
     AF.request(
         url,
@@ -22,11 +22,12 @@ func getData() {
         switch response.result{
         case .success:
             guard let result = response.data else {return}
-            
+
             do {
                 let decoder = JSONDecoder()
-                let json = try decoder.decode(Comment.self, from: result)
-                print(json)
+                let json = try decoder.decode(Data.self, from: result)
+
+                completedHandler(json)
             } catch {
                 print("error!\(error)")
             }
@@ -34,4 +35,7 @@ func getData() {
             return
         }
     })
+//    .responseDecodable(of: Data.self) { (response) in
+//      guard let films = response.value else { return }
+//    }
 }

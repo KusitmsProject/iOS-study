@@ -17,4 +17,11 @@ class DataCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
+    
+    func configure(_ data: Comment){
+        userID.text = data.userId
+        contentLabel.text = data.content
+        createLabel.text = data.createdAt
+        updateLabel.text = data.updateAt
+    }
 }
