@@ -12,7 +12,9 @@ import KakaoSDKAuth
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var userName: UILabel!
-
+    
+    let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+    
     var user = User()
     
     override func viewDidLoad() {
@@ -36,6 +38,34 @@ class HomeViewController: UIViewController {
     
     func setUI() {
         userName.text = user.name+"님"
+    }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        let logout = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        
+        logout.addAction(UIAlertAction(title: "네", style: .destructive, handler: {_ in self.logoutAction()}))
+        logout.addAction(UIAlertAction(title: "아니오", style: .cancel, handler: {_ in print("no")} ))
+        
+        present(logout, animated: true)
+    }
+    
+    func logoutAction() {
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                self.presentToMain()
+            }
+        }
+    }
+    
+    // 화면 전환 함수
+    func presentToMain() {
+        guard let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        mainVC.modalPresentationStyle = .fullScreen
+        present(mainVC, animated: false, completion: nil)
+
     }
     
 }

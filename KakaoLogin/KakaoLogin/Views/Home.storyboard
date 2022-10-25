@@ -28,11 +28,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N5-2l-79g">
+                                <rect key="frame" x="157" y="457" width="76" height="32"/>
+                                <color key="tintColor" red="0.99607843137254903" green="0.89803921568627454" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="로그아웃">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="baseForegroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseBackgroundColor" red="0.99607843139999996" green="0.8980392157" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iI8-ca-vLR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8N5-2l-79g" firstAttribute="top" secondItem="iXe-uh-KfV" secondAttribute="bottom" constant="116" id="Oub-Pn-4QF"/>
                             <constraint firstItem="E5X-cM-lvF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="240" id="W80-6E-4XT"/>
+                            <constraint firstItem="8N5-2l-79g" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="WJR-qc-QoY"/>
                             <constraint firstItem="E5X-cM-lvF" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="bam-on-1he"/>
                             <constraint firstItem="iXe-uh-KfV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="pdi-aq-Ew3"/>
                             <constraint firstItem="iXe-uh-KfV" firstAttribute="top" secondItem="E5X-cM-lvF" secondAttribute="bottom" constant="10" id="ybp-ld-HGy"/>
