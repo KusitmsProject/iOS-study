@@ -12,6 +12,6 @@ struct Comment: Decodable, Hashable {
 
 extension Comment {
     static var list = [
-        Comment(_id: " ", content: "", userId: "", createdAt: "", updateAt: "")
+        Comment(_id: " ", content: "ㅇㅇ", userId: "ㅇㅇ", createdAt: "ㅇㅇ", updateAt: "ㅇㅇ")
     ]
 }
