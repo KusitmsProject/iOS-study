@@ -88,7 +88,6 @@
 				15AE7583EB5D440DA71776BA /* Pods-KakaoLogin.debug.xcconfig */,
 				C7AE85427AA3F8CE8E646FA9 /* Pods-KakaoLogin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
