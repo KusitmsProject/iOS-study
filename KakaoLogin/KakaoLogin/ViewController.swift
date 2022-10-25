@@ -14,6 +14,8 @@ import KakaoSDKUser
 class ViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+
+    let homeStoryboard = UIStoryboard.init(name: "Home", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ extension ViewController {
     
     // 카카오 앱으로 로그인
     func loginWithApp() {
-        UserApi.shared.loginWithKakaoTalk {(_, error) in
+        UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
             if let error = error {
                 print(error)
             } else {
@@ -52,6 +54,8 @@ extension ViewController {
                         print(error)
                     } else {
                         print("카카오톡으로 로그인 성공")
+                        _ = oauthToken
+                        self.presentToHome()
                     }
                 }
             }
@@ -60,7 +64,7 @@ extension ViewController {
         
     // 카카오 웹으로 로그인
     func loginWithWeb() {
-        UserApi.shared.loginWithKakaoAccount {(_, error) in
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
             if let error = error {
                 print(error)
             } else {
@@ -71,10 +75,19 @@ extension ViewController {
                         print(error)
                     } else {
                         print("카카오톡으로 로그인 성공")
+                        _ = oauthToken
+                        self.presentToHome()
                     }
                 }
             }
         }
     }
 
+    // 화면 전환 함수
+    func presentToHome() {
+        guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
+        homeVC.modalPresentationStyle = .fullScreen
+        present(homeVC, animated: false, completion: nil)
+
+    }
 }

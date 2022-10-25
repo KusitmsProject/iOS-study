@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031A0F2C2907AA12000ACB4E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031A0F2B2907AA12000ACB4E /* Home.storyboard */; };
+		031A0F2F2907B0F4000ACB4E /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A0F2E2907B0F4000ACB4E /* userInfo.swift */; };
 		036F7EFD2907992800CD0456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F7EFC2907992800CD0456 /* AppDelegate.swift */; };
 		036F7EFF2907992800CD0456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F7EFE2907992800CD0456 /* SceneDelegate.swift */; };
 		036F7F012907992800CD0456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F7F002907992800CD0456 /* ViewController.swift */; };
 		036F7F042907992800CD0456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036F7F022907992800CD0456 /* Main.storyboard */; };
 		036F7F062907992900CD0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036F7F052907992900CD0456 /* Assets.xcassets */; };
 		036F7F092907992900CD0456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036F7F072907992900CD0456 /* LaunchScreen.storyboard */; };
+		03F3338D2907A98A003BB344 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3338C2907A98A003BB344 /* HomeViewController.swift */; };
 		0797970E2777E370143AAD54 /* Pods_KakaoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7B3BD52111F77FB41DE8AE /* Pods_KakaoLogin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031A0F2B2907AA12000ACB4E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		031A0F2E2907B0F4000ACB4E /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		036F7EF92907992800CD0456 /* KakaoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036F7EFC2907992800CD0456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036F7EFE2907992800CD0456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		036F7F052907992900CD0456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		036F7F082907992900CD0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036F7F0A2907992900CD0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03F3338C2907A98A003BB344 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15AE7583EB5D440DA71776BA /* Pods-KakaoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoLogin.debug.xcconfig"; path = "Target Support Files/Pods-KakaoLogin/Pods-KakaoLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		2E7B3BD52111F77FB41DE8AE /* Pods_KakaoLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KakaoLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AE85427AA3F8CE8E646FA9 /* Pods-KakaoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoLogin.release.xcconfig"; path = "Target Support Files/Pods-KakaoLogin/Pods-KakaoLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031A0F2D2907B0EA000ACB4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				031A0F2E2907B0F4000ACB4E /* userInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		036F7EF02907992800CD0456 = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +77,42 @@
 		036F7EFB2907992800CD0456 /* KakaoLogin */ = {
 			isa = PBXGroup;
 			children = (
-				036F7EFC2907992800CD0456 /* AppDelegate.swift */,
-				036F7EFE2907992800CD0456 /* SceneDelegate.swift */,
-				036F7F002907992800CD0456 /* ViewController.swift */,
-				036F7F022907992800CD0456 /* Main.storyboard */,
+				031A0F2D2907B0EA000ACB4E /* Models */,
+				03F333902907A9D4003BB344 /* Views */,
+				03F3338F2907A9C2003BB344 /* Resources */,
+				03F3338E2907A998003BB344 /* Controllers */,
 				036F7F052907992900CD0456 /* Assets.xcassets */,
-				036F7F072907992900CD0456 /* LaunchScreen.storyboard */,
 				036F7F0A2907992900CD0456 /* Info.plist */,
 			);
 			path = KakaoLogin;
+			sourceTree = "<group>";
+		};
+		03F3338E2907A998003BB344 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				036F7F002907992800CD0456 /* ViewController.swift */,
+				03F3338C2907A98A003BB344 /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03F3338F2907A9C2003BB344 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				036F7EFC2907992800CD0456 /* AppDelegate.swift */,
+				036F7EFE2907992800CD0456 /* SceneDelegate.swift */,
+				036F7F072907992900CD0456 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		03F333902907A9D4003BB344 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				036F7F022907992800CD0456 /* Main.storyboard */,
+				031A0F2B2907AA12000ACB4E /* Home.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		89C18014463C503AD80E119E /* Frameworks */ = {
@@ -154,6 +195,7 @@
 				036F7F092907992900CD0456 /* LaunchScreen.storyboard in Resources */,
 				036F7F062907992900CD0456 /* Assets.xcassets in Resources */,
 				036F7F042907992800CD0456 /* Main.storyboard in Resources */,
+				031A0F2C2907AA12000ACB4E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +251,8 @@
 				036F7F012907992800CD0456 /* ViewController.swift in Sources */,
 				036F7EFD2907992800CD0456 /* AppDelegate.swift in Sources */,
 				036F7EFF2907992800CD0456 /* SceneDelegate.swift in Sources */,
+				031A0F2F2907B0F4000ACB4E /* userInfo.swift in Sources */,
+				03F3338D2907A98A003BB344 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
